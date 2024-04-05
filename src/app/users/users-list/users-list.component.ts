@@ -1,4 +1,4 @@
-import {afterNextRender, Component, inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {afterNextRender, ChangeDetectionStrategy, Component, inject, OnInit, PLATFORM_ID} from '@angular/core';
 import UsersService from "../users.service";
 import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
 import {User} from "../user.type";
@@ -13,6 +13,7 @@ import {NgForOf, NgIf} from "@angular/common";
     NgForOf,
     NgIf
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './users-list.component.html',
   styleUrl: './users-list.component.css'
 })
